@@ -1,0 +1,6 @@
+.card__container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 227px 0 0;
+}

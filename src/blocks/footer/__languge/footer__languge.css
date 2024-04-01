@@ -1,0 +1,10 @@
+.footer__languge {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.29px;
+    color: #101010;
+}
+
+.footer__languge:hover {
+    cursor:pointer;
+}

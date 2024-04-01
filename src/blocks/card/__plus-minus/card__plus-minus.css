@@ -1,0 +1,17 @@
+.kart__plus-minus {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 15px;
+    background-color: #FFCE7F;
+    font-size: 32px;
+    color: #fff;
+}
+
+.card__plus-minus:hover {
+    cursor: pointer;
+}

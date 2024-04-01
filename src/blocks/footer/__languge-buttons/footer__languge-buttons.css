@@ -1,0 +1,11 @@
+.footer__languge-buttons {
+    width: 111px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__languge-buttons:hover {
+    cursor: pointer;
+}

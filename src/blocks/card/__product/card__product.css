@@ -1,0 +1,7 @@
+.card__product {
+    display: flex;
+    height: 218px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 0 0 20px 0;
+}

@@ -1,0 +1,10 @@
+.header__heart-number-trolley {
+    position: absolute;
+    height: 17.4px;
+    padding: 0 6px 0 6px;
+    left: 121px;
+    bottom: 18px;
+    border-radius: 11px;
+    background-color: #ffa542;
+    color: #fff;
+}

@@ -1,0 +1,9 @@
+.card__trash-button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.card__trash-button:hover{
+    cursor:pointer;
+}

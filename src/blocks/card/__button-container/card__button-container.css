@@ -1,0 +1,7 @@
+.card__button-container {
+    width: 118.21px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

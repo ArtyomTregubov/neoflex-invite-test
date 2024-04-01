@@ -1,0 +1,13 @@
+.gallery__buy {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20.27px;
+    color: #000;
+}
+
+.gallery__buy:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.card__result-container {
+    width: 311.22px;
+    height: 19px;
+    display: flex;
+    justify-content: space-between;
+    margin: 21px 0 0;
+}

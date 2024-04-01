@@ -1,0 +1,17 @@
+.card__make-button {
+    width: 348.98px;
+    height: 65px;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    background-color: #101010;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20.72px;
+    color: #fff;
+
+}
+
+.card__make-button:hover{
+    cursor: pointer;
+}

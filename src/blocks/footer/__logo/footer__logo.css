@@ -1,0 +1,8 @@
+.footer__logo {
+    height: 23px;
+    margin: 29px 0 0 29px;
+}
+
+.footer__logo:hover {
+    cursor: pointer;
+}

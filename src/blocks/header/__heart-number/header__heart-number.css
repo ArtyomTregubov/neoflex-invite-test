@@ -1,0 +1,10 @@
+.header__heart-number{
+    position: absolute;
+    height: 17.4px;
+    padding: 0 4px 0 5px;
+    right: 88px;
+    bottom: 18px;
+    border-radius: 11px;
+    background-color: #ffa542;
+    color: #fff;
+}
