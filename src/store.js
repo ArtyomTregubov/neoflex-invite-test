@@ -7,10 +7,14 @@ const useStore = create((set) => ({
       items: [...state.items, { ...item }],
     })),
   deleteItem: (id) =>
+    set((state) => ({
+      items: state.items.filter((item) => item.id !== id)
+    })),
+  decreaseItem: (item) =>
     set((state) => {
-      const newItems = [...state.items];
-      newItems.filter((item) => item.id !== id)
-      return { items: newItems };
+      let idx = state.items.findIndex(i => i.id === item.id);
+      state.items.splice(idx, 1);
+      return { items: [...state.items]};
     }),
 }));
 

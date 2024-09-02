@@ -8,7 +8,7 @@ import useStore from "../store";
 
 const App = () => {
 
-  const { items, addItem } = useStore();
+  const { items, addItem, deleteItem, decreaseItem } = useStore();
 
   const headphones = [
     {
@@ -94,6 +94,21 @@ const App = () => {
   function onAddItemBusket(item) {
     addItem(item)
     localStorage.setItem("items", JSON.stringify([...items, { ...item }]))
+    console.log('onAddItemBusket вызвана', items)
+  }
+
+  function onDeleteItemBusket(item) {
+    deleteItem(item.id);
+    const updatedItems = items.filter(i => i.id !== item.id );
+    localStorage.setItem("items", JSON.stringify(updatedItems));
+  }
+
+  function onDecreaseItemBusket(item) {
+    let items_copy = [...items];
+    let idx = items_copy.findIndex(i => i.id === item.id);
+    items_copy.splice(idx, 1);
+    decreaseItem(item)
+    localStorage.setItem("items", JSON.stringify(items_copy));
   }
 
   return (
@@ -102,7 +117,7 @@ const App = () => {
           <Route
             path="/"
               element={
-                <main>
+                <main className="main">
                   <Header
                       basketCount={items.length}
                   />
@@ -125,13 +140,17 @@ const App = () => {
           />
           <Route
             path="/basket"
-                element={
-                  <main>
-                    <Header busketCount={items.length}/>
-                    <Basket onCardClick={onAddItemBusket}/>
-                    <Footer/>
-                  </main>
-                }
+            element={
+              <main>
+                <Header busketCount={items.length}/>
+                <Basket 
+                  onCardClick={onAddItemBusket}
+                  onDeleteItem={onDeleteItemBusket}
+                  onDecreaseItem={onDecreaseItemBusket}
+                />
+                <Footer/>
+              </main>
+            }
           />
 
 

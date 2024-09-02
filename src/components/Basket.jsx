@@ -2,23 +2,23 @@ import React from "react";
 import CardBasket from "./CardBasket";
 import useStore from "../store";
 
-const Basket = ({onCardClick}) => {
+const Basket = ({onCardClick, onDeleteItem, onDecreaseItem}) => {
     let { items } = useStore() ;
     items = items.length > 0 ? items : JSON.parse(localStorage.getItem("items"));
     let calculateSum;
     let countItems = {};
     let itemsRender = [];
+    
     if(items){
             calculateSum = items.reduce(
           (accumulator, item) => {
               const price = item.priceDiscont || item.price;
               return accumulator + price;
-          }, 0,
-        );
+          }, 0);
 
-        items.map((info) => {
-                          countItems[info.id] = countItems[info.id] ? countItems[info.id] + 1 : 1;})
-        Object.keys(countItems).forEach((id, count) => {
+        items.forEach((info) => {
+            countItems[info.id] = countItems[info.id] ? countItems[info.id] + 1 : 1;})
+            Object.keys(countItems).forEach((id, count) => {
               const item = items.find((item) => item.id === Number(id));
               itemsRender.push(item);
         })
@@ -35,6 +35,8 @@ const Basket = ({onCardClick}) => {
                               <CardBasket
                                   data={item}
                                   onCardClick={onCardClick}
+                                  onDeleteItem={onDeleteItem}
+                                  onDecreaseItem={onDecreaseItem}
                                   key={item.id}
                                   countItem={countItems[item.id]}
                               />

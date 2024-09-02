@@ -1,20 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
       <footer className="footer">
-          <a href="/">
+          <Link to="/">
               <img src="/images/qpick_logo.png" alt="Логотип qpick" className="footer__logo"/>
-          </a>
+          </Link>
 
           <div className="footer__link-container">
-              <a className="footer__link" href="#">Избранное</a>
-              <a className="footer__link" href="/basket">Корзина</a>
-              <a className="footer__link" href="#">Контакты</a>
+              <Link className="footer__link" to="#">Избранное</Link>
+              <Link className="footer__link" to="/basket">Корзина</Link>
+              <Link className="footer__link" to="#">Контакты</Link>
           </div>
 
           <div className="footer__link-container">
-              <a className="footer__link" href="#">Условия сервиса</a>
+              <Link className="footer__link" to="#">Условия сервиса</Link>
               <div className="footer__languge-buttons">
                   <button className="footer__languge-button">
                       <img src="/images/language_icon.png" alt="Логотип выбора языка"
@@ -24,22 +25,23 @@ export default function Footer() {
                   <span className="footer__languge">Eng</span>
               </div>
           </div>
+          
 
           <div className="footer__social-networks">
 
-              <a className="footer__link" href="https://vk.com/neoflex_ru">
+              <Link className="footer__link" to="https://vk.com/neoflex_ru">
                   <img src="/images/vk_icon.svg" alt="Логотип vk" className="footer__social-network-icon"/>
-              </a>
+              </Link>
 
-              <a className="footer__link" href="https://t.me/neoflexcareers">
+              <Link className="footer__link" to="https://t.me/neoflexcareers">
                   <img src="/images/telegram_icon.svg" alt="Логотип telegram"
                        className="footer__social-network-icon"/>
-              </a>
+              </Link>
 
-              <a className="footer__link" href="#">
+              <Link className="footer__link" to="#">
                   <img src="/images/whatsapp_icon.svg" alt="Логотип whatsapp"
                        className="footer__social-network-icon"/>
-              </a>
+              </Link>
 
           </div>
 
